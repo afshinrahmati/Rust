@@ -177,3 +177,16 @@ type String save on the heap directly;because we don't have any size about it an
 let mut my_string = String::from("یک رشته جدید میباشد");
 my_string.push_string("ادامه متن")
 in Heap ==>index(0)ی index(1) ک
+
+let obj = {name:afshin};
+let a = obj
+Heap:
+| Address | Value |
+|----------|---------|
+| 0x001 | {} | <- Single object
+
+Stack:
+| Variable | Value (Reference) |
+|-------------|--------------------|
+| ourObject | 0x001 | <- Pointer to the object in the heap
+| a | 0x001 | <- Pointer to the same object in the heap
