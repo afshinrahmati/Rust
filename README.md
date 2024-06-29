@@ -190,3 +190,29 @@ Stack:
 |-------------|--------------------|
 | ourObject | 0x001 | <- Pointer to the object in the heap
 | a | 0x001 | <- Pointer to the same object in the heap
+
+# borrowing
+
+that mean malkeit do not change with &<refrence>.
+let a = String::from("hello");
+some_function(&a);
+fn some_function(input: &String) {
+print!("some function value : {}", input);
+}
+
+- if we want to change some value that we borrowing we should call \* that mean refrence then cahnge it<&mut>
+
+      fn main() {
+      // PART SEVEN BORROWING
+
+      let mut  a = String::from("hello");
+      some_function(&mut a);
+
+      println!("function:{}", a);
+      }
+
+      fn some_function(input: &mut String) {
+      input.push_str(" afshin");
+      print!("some function value : {}", input);
+
+  }
