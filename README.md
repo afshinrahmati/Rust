@@ -193,7 +193,7 @@ Stack:
 
 # borrowing
 
-that mean malkeit do not change with &<refrence>.
+that mean malkeit do not change with &<refrence just can Raed the value>.
 let a = String::from("hello");
 some_function(&a);
 fn some_function(input: &String) {
@@ -215,4 +215,28 @@ print!("some function value : {}", input);
       input.push_str(" afshin");
       print!("some function value : {}", input);
 
-  }
+      }
+# data raceing
+
+that mean we have 3 variable and all of them use from one pointer in memory and if one of them can vary the value happen datadracing
+
+
+# slicing
+part of our collection [1,3,5,6,7] ==> 6,7
+
+lrt y = my_array[0..2] or [1..=3]
+
+# struct
+that is blueprint that mean we not defined the value we just defined the type like the class 
+```
+struct Student [
+   name:String
+   age: u32,
+   graduated: bool
+]
+fun main() {
+   let asghar = Student {
+      name:String::from()
+   }
+}
+````
